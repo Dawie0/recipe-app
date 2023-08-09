@@ -5,7 +5,7 @@ import './App.css'
 function App() {
 
   return (
-    <div className='container-fluid'>
+    <div className='container-fluid main-container'>
       <NavBar />
       <SearchForm />
     </div>

@@ -7,6 +7,11 @@ body {
   max-width: 200px;
 }
 
+.main-container {
+  max-width: 98vw;
+}
+
+
 @media (max-width: 576px) {
   /* For screen widths up to 576px (e.g., xs), apply smaller font size */
   body {
