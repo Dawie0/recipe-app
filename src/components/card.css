@@ -1,0 +1,88 @@
+.prop-image {
+    width: 98%;
+    border-radius: 20px;
+    max-height: 200px;
+}
+
+.card {
+    color: white;
+    background-color: #343434;
+    border: 1px solid;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.glass-morph {
+    background: rgba( 155, 155, 155, 0.1 );
+    
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.card:hover {
+    transition: all .4s ease-in-out;
+    transform: scale(1.01);
+    box-shadow: 0 1px 0 1px rgba(160, 192, 150, 0.308);
+}
+
+
+.btn {
+    text-decoration: none;
+    position: relative;
+    border: none;
+    font-size: 14px;
+    font-family: inherit;
+    color: #fff;
+    width: 9em;
+    height: 3em;
+    line-height: 2em;
+    text-align: center;
+    background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    background-size: 300%;
+    border-radius: 30px;
+    z-index: 1;
+  }
+  
+  .btn:hover {
+    animation: ani 8s linear infinite;
+    border: none;
+  }
+  
+  @keyframes ani {
+    0% {
+      background-position: 0%;
+    }
+  
+    100% {
+      background-position: 400%;
+    }
+  }
+  
+  .btn:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    background-size: 400%;
+    border-radius: 35px;
+    transition: 1s;
+  }
+  
+  .btn:hover::before {
+    filter: blur(20px);
+  }
+  
+  .btn:active {
+    background: linear-gradient(32deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+  }
+
+
+.btn2 {
+  border-radius: 20px;
+}
