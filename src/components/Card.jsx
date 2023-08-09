@@ -8,7 +8,7 @@ const Card = ( { recipe } ) => {
 
     const getRecipe = async () => {
         try {
-          const res = await axios.get(`http://localhost:5000/api/recipe-details/${recipeID}`);
+          const res = await axios.get(`https://rapid-api-backends.vercel.app/api/recipe-details/${recipeID}`);
           const { data } = res;
         //   setResponse(data.results);
         url = data.sourceUrl

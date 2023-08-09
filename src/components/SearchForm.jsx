@@ -17,7 +17,7 @@ const SearchForm = () => {
         }
         try {
           setLoading(true);
-          const res = await axios.get("http://localhost:5000/api/recipe", {
+          const res = await axios.get("https://rapid-api-backends.vercel.app/api/recipe", {
             params: { keyword, diet, exclude },
           });
           
