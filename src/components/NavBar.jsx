@@ -8,7 +8,6 @@ const NavBar = () => {
             <div className='col-xs-12 col-md-6 d-none d-md-block d-flex justify-content-center'>
                 <h1>Recipe-FY</h1>
             </div>
-            
         </div>
     )
 }

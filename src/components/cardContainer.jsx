@@ -13,9 +13,7 @@ const CardContainer = ({ recipes }) => {
                 )
             })
         )
-        
     }
-
     return (
         <div className="row m-3 justify-content-center">
             {handleCardPopulate()}

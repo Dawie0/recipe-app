@@ -11,7 +11,6 @@ const SearchForm = () => {
     const [loading, setLoading] = useState(false)
     const [response, setResponse] = useState(false)
 
-
     const getRecipes = async () => {
         if (diet === 'none') {
             setDiet('')
@@ -28,10 +27,8 @@ const SearchForm = () => {
         } catch (error) {
           setLoading(false);
         }
-      }
+    }
 
-
-      console.log('response: ', Array.isArray(response), response)
     return (
         <div className="row d-flex mt-4 justify-content-center">
             <div className="row justify-content-center">

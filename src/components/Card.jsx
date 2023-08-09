@@ -4,23 +4,26 @@ import './card.css'
 
 const Card = ( { recipe } ) => {
     const recipeID = recipe.id
+    let url = ''
 
     const getRecipe = async () => {
-        
         try {
-          const res = await axios.get("http://localhost:5000/api/recipe-details", {
-            params: { recipeID },
-          });
-          
+          const res = await axios.get(`http://localhost:5000/api/recipe-details/${recipeID}`);
           const { data } = res;
         //   setResponse(data.results);
+        url = data.sourceUrl
+        newTab()
         } catch (error) {
           console.error(error)
         }
-      }
+    }
+    const newTab = () => {
+        window.open(url, '_blank')
+    }
 
     return (
-        <div className="col-xs-12 col-sm-4 col-md-3 m-2 card glass-morph">
+        <div className="col-xs-12 col-sm-4 col-md-3 m-2 card glass-morph"
+            onClick={getRecipe}>
             <div className="row d-flex justify-content-center align-items-center">
                 <div className="col-12 d-flex justify-content-center">
                     <img className='prop-image' src={recipe.image} />
@@ -28,16 +31,9 @@ const Card = ( { recipe } ) => {
                 <div className="col-12 text-center">
                     <span>{recipe.title}</span>
                 </div>
-                {/* <div className="col-12  d-flex justify-content-center align-items-center">
-                    <a href={recipe.rdc_web_url} target="_blank" rel='noreferrer'>
-                    <button className="btn2">
-                        Details
-                        <div className=""></div>
-                    </button>
-                    </a>
-                </div> */}
+                <div className="col-12  d-flex justify-content-center align-items-center">
+                </div>
             </div>
-
         </div>
     )
 }
