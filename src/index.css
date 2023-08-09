@@ -6,3 +6,17 @@ body {
 .logo {
   max-width: 200px;
 }
+
+@media (max-width: 576px) {
+  /* For screen widths up to 576px (e.g., xs), apply smaller font size */
+  body {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  /* For screen widths between 576px and 768px (e.g., sm), apply medium font size */
+  body {
+      font-size: 12px;
+  }
+}
